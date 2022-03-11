@@ -26,8 +26,13 @@ public function shorter($text, $chars_limit)
     return $text;
     }
 }
-	public function catview(){
-		$sqlquery = "SELECT * FROM category_table";
+public function catview(){
+	$sqlquery = "SELECT * FROM category_table";
+	$result = $this->queryfunk_help($sqlquery);
+	return $result;
+	}
+	public function catviewlimit($limit){
+		$sqlquery = "SELECT * FROM category_table limit $limit";
 		$result = $this->queryfunk_help($sqlquery);
 		return $result;
 		}
@@ -65,7 +70,7 @@ public function teacherlist(){
 				}
 
 		public function teacheraccountbalance($teacher_id){
-			$sqlquery = "SELECT * FROM  enrole_student_list LEFT JOIN  course_table ON course_table.course_id = enrole_student_list.course_id LEFT JOIN teacher_table  ON teacher_table.teacher_id=course_table.teacher_id  WHERE course_table.teacher_id = $teacher_id";
+			$sqlquery = "SELECT * FROM  enrole_student_list LEFT JOIN  course_table ON course_table.course_id = enrole_student_list.course_id  WHERE course_table.teacher_id = $teacher_id";
 			$result = $this->queryfunk_help($sqlquery);
 		return $result;
 		

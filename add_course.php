@@ -31,7 +31,6 @@
 						<div class="course-info">
 							<div class="course-text">
 								<h5><?php echo $value['course_title']; ?></h5>
-								<p><?php echo $viewcls->shorter($value['course_details'],50); ?></p>
 								
 								<div class="students"><?php 
 								echo $viewcourse = $viewcls->enrolestudentcount($value['course_id']);

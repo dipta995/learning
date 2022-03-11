@@ -5,8 +5,8 @@
 	<section class="hero-section set-bg" data-setbg="img/bg.jpg">
 		<div class="container">
 			<div class="hero-text text-white">
-				<h2>Get The Best Free Online Courses</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla <br> dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+				<h2 style="color: #fff;">Find Free Online Courses</h2>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla <br> dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p> -->
 			</div>
 			<div class="row">
 				<div class="col-lg-3"></div>
@@ -14,7 +14,7 @@
 					<form method="get" action="searchresult.php?search=" class="intro-newslatter">
 						<input type="text" name="search" placeholder="Enter Course name">
 						 
-						<button class="site-btn">Search </button>
+						<button style="border-radius: 25px;" class="site-btn">Search </button>
 					</form>
 				</div>
 			</div>
@@ -27,20 +27,19 @@
 	<section class="categories-section spad">
 		<div class="container">
 			<div class="section-title">
-				<h2>Our Course Categories</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+				<h2> Course Categories</h2>
+				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p> -->
 			</div>
 			<div class="row">
 				<!-- categorie -->
 				<?php 
-					$viewcat = $viewcls->catview();
+					$viewcat = $viewcls->catviewlimit(3);
 					if ($viewcat) {
 					foreach ($viewcat as $value) {
 					
 				 ?>
 				<div class="col-lg-4 col-md-6">
 					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="<?php echo $value['category_image']; ?>"></div>
 						<a href="courses.php?catid=<?php echo $value['category_id']; ?>">
 							
 						<div class="ci-text">
@@ -55,6 +54,10 @@
 					</div>
 				</div>
 				<?php } }  ?>
+				 
+			</div>
+			<div class="section-title">
+				<a class="site-btn" href="categories.php">See All Categories</a>
 			</div>
 		</div>
 	</section>
@@ -99,7 +102,6 @@
 						<div class="course-info">
 							<div class="course-text">
 	 							<h5><?php echo $value['course_title']; ?></h5>
-								<p><?php echo $viewcls->shorter($value['course_details'],50); ?></p>
 								
 								<div class="students"><?php 
 								echo $viewcourse = $viewcls->enrolestudentcount($value['course_id']);
@@ -145,49 +147,7 @@
 		</div>
 	</section>
 	<!-- course section end -->
-	<?php 
-			if (isset($_SESSION['teacher_auth'])=='teacher_auth') {}else{
-			 
-			 ?>
-
-	<!-- signup section -->
-	<section class="signup-section spad">
-		<div class="signup-bg set-bg" data-setbg="img/signup-bg.jpg"></div>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="signup-warp">
-						<div class="section-title text-white text-left">
-							<h2>Sign up to became a teacher</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-						</div>
-						<?php 
-						if ($_SERVER['REQUEST_METHOD']=='POST') {
-							$sending = $senddata->teacherregistration($_POST);
-
-							}
-						 ?>
-						<!-- signup form -->
-						<form method="post" action="" class="signup-form">
-							<?php/* if (isset($sending)) {
-								echo $sending;
-							}*/ ?>
-							<input type="text" name="teacher_name" placeholder="Your Name">
-							<input type="text" name="teacher_email" placeholder="Your E-mail">
-							<input type="text" name="teacher_phone" placeholder="Your Phone">
-							<input type="text" name="teacher_password" placeholder="Your Password">
-							<input type="text" name="account_no" placeholder="Your account number">
-							<!-- <label for="v-upload" class="file-up-btn">Upload Course</label>
-							<input type="file" id="v-upload"> -->
-							<input class="site-btn" type="submit" name="submit" value="Signup Now">
-							 
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-<?php } ?>
+	
 	<!-- signup section end -->
 
 

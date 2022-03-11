@@ -73,13 +73,9 @@ if (isset($get)) {
 
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login100 p-t-90 p-b-30">
+			<div class="wrap-login100 p-b-30">
 				<form action="" method="post" class="login100-form validate-form">
-					<span class="login100-form-title p-b-40">
-						Login
-					</span>
-
-				 
+				
 
 					<div class="text-center p-t-55 p-b-30">
 						<span class="txt1">
@@ -110,16 +106,18 @@ if (isset($get)) {
 					</div>
  
 
-					<div class="flex-col-c p-t-224">
+					<div class="flex-col-c p-t-50">
 						<span class="txt2 p-b-10">
 							Don’t have an account?
 						</span>
-
+						<div class="container-login100-form-btn">
 						<a href="registration.php?reg=teacher" class="login100-form-btn">
 							Teacher Signup
-						</a><a href="registration.php?reg=student" class="login100-form-btn">
+						</a>
+						<a href="registration.php?reg=student" class="login100-form-btn">
 							Student Signup 
 						</a>
+						</div>
 					</div>
 
 				</form>
@@ -127,6 +125,11 @@ if (isset($get)) {
 		</div>
 	</div>
 
+	<style>
+		.container-login100-form-btn a:hover{
+			color: while !important;
+		}
+	</style>
 
 <!--===============================================================================================-->
 	<script src="login/vendor/jquery/jquery-3.2.1.min.js"></script>

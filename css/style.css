@@ -25,7 +25,7 @@ h5,
 h6 {
 	margin: 0;
 	font-weight: 600;
-	color: #474747;
+	color: #000;
 }
 
 h1 {
@@ -54,7 +54,7 @@ h6 {
 
 p {
 	font-size: 14.1px;
-	color: #878787;
+	color: #000;
 	line-height: 2.2;
 	font-weight: 500;
 }
@@ -87,7 +87,7 @@ textarea:focus {
 }
 
 a:hover {
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 a:hover,
@@ -144,7 +144,7 @@ ol {
 .text-white span,
 .text-white li,
 .text-white a {
-	color: #fff;
+	color: rgb(0, 0, 0);
 }
 
 .rating i {
@@ -172,7 +172,8 @@ ol {
 	position: relative;
 	color: #fff;
 	cursor: pointer;
-	background: #d82a4e;
+	background: #02bc28;
+	border-radius: 25px;
 }
 
 .site-btn:hover {
@@ -279,18 +280,19 @@ ol {
 .main-menu ul li a {
 	display: inline-block;
 	font-size: 16px;
-	color: #fff;
+	color: #0c129f;
 	margin-left: 45px;
 	font-weight: 600;
 	padding: 20px 0 5px;
 }
 
 .main-menu ul li a:hover {
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 .header-btn {
 	float: right;
+	border-radius: 25px;
 	margin-right: 0;
 }
 
@@ -303,12 +305,12 @@ ol {
 ---------------------*/
 
 .hero-section {
-	height: 948px;
+	height: 550px;
 }
 
 .hero-text {
 	text-align: center;
-	padding-top: 340px;
+	padding-top: 170px;
 	margin-bottom: 105px;
 }
 
@@ -320,6 +322,7 @@ ol {
 
 .intro-newslatter input[type=text],
 .intro-newslatter input[type=email] {
+	border-radius: 25px;
 	height: 53px;
 	width: 36.4%;
 	padding: 0 30px;
@@ -331,6 +334,7 @@ ol {
 
 .intro-newslatter .site-btn {
 	min-width: 214px;
+	border-radius: 25px;
 }
 
 /*------------------
@@ -347,12 +351,14 @@ ol {
 	-webkit-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
+	border-radius: 25px;
 }
 
 .categorie-item .ci-thumb {
 	background-size: cover;
 	height: 148px;
 	-webkit-transition: all 0.2s;
+	border-radius: 25px 25px 0px 0px;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
 }
@@ -368,11 +374,11 @@ ol {
 .categorie-item .ci-text span {
 	font-size: 18px;
 	font-weight: 600;
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 .categorie-item:hover {
-	background: #d82a4e;
+	background: #02bc28;
 }
 
 .categorie-item:hover .ci-text h5,
@@ -386,7 +392,7 @@ ol {
 ---------------------*/
 
 .search-warp {
-	background: #d82a4e;
+	background: #02bc28;
 	padding-top: 60px;
 	padding-bottom: 50px;
 }
@@ -405,6 +411,7 @@ ol {
 	height: 56px;
 	width: 36.6%;
 	padding: 0 30px;
+	border-radius: 25px;
 	margin-right: 18px;
 	float: left;
 	border: none;
@@ -414,21 +421,24 @@ ol {
 
 .course-search-form input[type=text]:focus,
 .course-search-form input[type=email]:focus {
-	border-bottom: 2px solid #d82a4e;
+	border-bottom: 2px solid #02bc28;
 }
 
 .course-search-form .site-btn {
 	min-width: 198px;
+	border-radius: 25px;
 	padding: 16px 10px;
 }
 
 .search-section.ss-other-page {
 	margin-top: -85px;
+
 }
 
 .search-section.ss-other-page .search-warp {
 	position: relative;
 	padding: 60px 0;
+	border-radius: 25px;
 }
 
 .search-section.ss-other-page .section-title {
@@ -447,7 +457,7 @@ ol {
 
 .search-section.ss-other-page .section-title h2 span {
 	display: inline-block;
-	background: #d82a4e;
+	background: #02bc28;
 	padding: 20px 60px 10px;
 }
 
@@ -477,13 +487,14 @@ ol {
 
 .course-item .course-thumb {
 	height: 270px;
+	border-radius: 25px 25px 0px 0px;
 }
 
 .course-item .course-thumb .price {
 	font-size: 14px;
 	color: #fff;
 	font-weight: 600;
-	background: #d82a4e;
+	background: #02bc28;
 	display: inline-block;
 	padding: 13px 19px;
 	margin: 14px;
@@ -491,10 +502,11 @@ ol {
 
 .course-item .course-info {
 	background: #edf4f6;
+	border-radius: 0px 0px 25px 25px ;
 }
 
 .course-item .course-info .course-text {
-	padding: 45px 33px 25px;
+	padding: 15px 33px 25px;
 }
 
 .course-item .course-info .course-text h5 {
@@ -504,7 +516,7 @@ ol {
 .course-item .course-info .course-text .students {
 	font-size: 18px;
 	font-weight: 600;
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 .course-item .course-info .course-author {
@@ -528,7 +540,7 @@ ol {
 }
 
 .course-item .course-info .course-author p span {
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 .course-item.featured-course {
@@ -555,7 +567,7 @@ ol {
 
 .course-item.featured-course .fet-note {
 	display: inline-block;
-	background: #d82a4e;
+	background: #02bc28;
 	color: #fff;
 	font-size: 14px;
 	font-weight: 500;
@@ -587,7 +599,7 @@ ol {
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 600;
-	color: #474747;
+	color: #000;
 	padding: 12px 10px 5px;
 	margin: 0 10px;
 	border-bottom: 4px solid transparent;
@@ -598,8 +610,8 @@ ol {
 }
 
 .course-filter li.mixitup-control-active {
-	color: #d82a4e;
-	border-bottom: 4px solid #d82a4e;
+	color: #02bc28;
+	border-bottom: 4px solid #02bc28;
 }
 
 /*------------------
@@ -607,7 +619,7 @@ ol {
 ---------------------*/
 
 .signup-section {
-	background: #d82a4e;
+	background: #02bc28;
 	position: relative;
 }
 
@@ -658,7 +670,7 @@ ol {
 .contact-form input[type=text]:focus,
 .contact-form input[type=email]:focus,
 .contact-form textarea:focus {
-	border-bottom: 2px solid #d82a4e;
+	border-bottom: 2px solid #02bc28;
 }
 
 .signup-form input[type=file],
@@ -702,7 +714,7 @@ ol {
 ---------------------*/
 
 .footer-section {
-	border-top: 3px solid #d82a4e;
+	border-top: 3px solid #02bc28;
 }
 
 .footer-warp {
@@ -758,7 +770,7 @@ ol {
 	left: -5px;
 	top: 6px;
 	border-radius: 50%;
-	background: #d82a4e;
+	background: #02bc28;
 }
 
 .footer-newslatter {
@@ -816,7 +828,7 @@ ol {
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 600;
-	color: #474747;
+	color: #000;
 	padding-right: 10px;
 	margin-right: 10px;
 	position: relative;
@@ -834,7 +846,7 @@ ol {
 	float: left;
 	font-size: 14px;
 	font-weight: 600;
-	color: #474747;
+	color: #000;
 }
 
 /*------------------
@@ -873,7 +885,7 @@ ol {
 }
 
 .site-breadcrumb span {
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 /*------------------
@@ -883,11 +895,12 @@ ol {
 .course-meta-area {
 	background: #edf4f6;
 	padding: 35px 0;
+	border-radius: 25px;
 }
 
 .course-meta-area .course-note {
 	display: inline-block;
-	background: #d82a4e;
+	background: #02bc28;
 	color: #fff;
 	font-size: 14px;
 	font-weight: 500;
@@ -940,7 +953,7 @@ ol {
 }
 
 .course-meta .course-author p span {
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 .course-meta .cm-info h6 {
@@ -963,7 +976,7 @@ ol {
 
 .course-meta-area .price-btn {
 	padding: 20px 30px;
-	background: #474747;
+	background: #000;
 	margin-right: 10px;
 }
 
@@ -1013,7 +1026,7 @@ ol {
 	color: #fff;
 	font-size: 22px;
 	padding-top: 10px;
-	background: #d82a4e;
+	background: #02bc28;
 }
 
 /*------------------
@@ -1146,7 +1159,7 @@ ol {
 }
 
 .sb-widget-item ul li a:hover {
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 .sb-widget-item .tags a {
@@ -1154,7 +1167,7 @@ ol {
 	display: inline-block;
 	padding: 9px 24px;
 	color: #fff;
-	background: #d82a4e;
+	background: #02bc28;
 	margin-bottom: 10px;
 	margin-right: 6px;
 	font-weight: 500;
@@ -1168,12 +1181,12 @@ ol {
 .site-pagination a,
 .site-pagination span {
 	font-size: 16px;
-	color: #474747;
+	color: #000;
 	font-weight: 600;
 }
 
 .site-pagination span.active {
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 /*------------------
@@ -1181,7 +1194,7 @@ ol {
 ---------------------*/
 
 .contact-form-warp {
-	background: #d82a4e;
+	background: #02bc28;
 	padding: 45px 47px;
 }
 
@@ -1209,7 +1222,7 @@ ol {
 .contact-info-area .phone-number span {
 	font-size: 18px;
 	font-weight: 700;
-	color: #d82a4e;
+	color: #02bc28;
 	display: block;
 	margin-bottom: 5px;
 }
@@ -1229,7 +1242,7 @@ ol {
 	height: 3px;
 	left: 0;
 	bottom: 0;
-	background: #d82a4e;
+	background: #02bc28;
 }
 
 .contact-info-area .contact-list {
@@ -1258,7 +1271,7 @@ ol {
 	left: -5px;
 	top: 6px;
 	border-radius: 50%;
-	background: #d82a4e;
+	background: #02bc28;
 }
 
 .contact-info-area .social-links {
@@ -1292,7 +1305,7 @@ ol {
 
 .element .e-title {
 	font-size: 48px;
-	color: #474747;
+	color: #000;
 	margin-bottom: 110px;
 }
 
@@ -1316,7 +1329,7 @@ ol {
 }
 
 .accordion-area .panel-header .panel-link.active {
-	background: #d82a4e;
+	background: #02bc28;
 	color: #fff;
 }
 
@@ -1382,7 +1395,7 @@ ol {
 }
 
 .tab-element .nav-tabs .nav-link.active {
-	background: #d82a4e;
+	background: #02bc28;
 	color: #fff;
 }
 
@@ -1429,7 +1442,7 @@ ol {
 
 .fact-item h2 {
 	font-size: 60px;
-	color: #d82a4e;
+	color: #02bc28;
 }
 
 .icon-box h5 {
@@ -1438,7 +1451,7 @@ ol {
 
 .icon-box h5 span {
 	font-size: 60px;
-	color: #d82a4e;
+	color: #02bc28;
 	margin-right: 15px;
 }
 
@@ -1468,6 +1481,7 @@ ol {
 	}
 	.header-btn {
 		min-width: 160px;
+		border-radius: 25px;
 	}
 	.hero-text h2 {
 		font-size: 55px;
@@ -1478,15 +1492,17 @@ ol {
 	.course-search-form input[type=text],
 	.course-search-form input[type=email] {
 		width: 34.6%;
+		border-radius: 25px;
 	}
 	.course-search-form .site-btn {
 		min-width: 173px;
 	}
 	.course-item .course-thumb {
 		height: 220px;
+		
 	}
 	.course-item .course-info .course-text {
-		padding: 45px 15px 25px;
+		padding: 15px 15px 25px;
 	}
 	.course-item .course-info .course-author {
 		padding: 14px 15px;
@@ -1516,7 +1532,10 @@ ol {
 	}
 	.intro-newslatter input[type=text],
 	.intro-newslatter input[type=email] {
+		border-radius: 25px;
 		width: 33%;
+		border-radius: 25px;
+		
 	}
 	.intro-newslatter .site-btn {
 		min-width: 190px;
@@ -1530,6 +1549,7 @@ ol {
 	.course-search-form input[type=text],
 	.course-search-form input[type=email] {
 		width: 48.1%;
+		border-radius: 25px;
 		margin-bottom: 20px;
 	}
 	.course-search-form input[type=text].last-m,
@@ -1580,6 +1600,7 @@ ol {
 	}
 	.header-btn {
 		display: none;
+		border-radius: 25px;
 	}
 	.nav-switch {
 		display: block;
@@ -1612,7 +1633,7 @@ ol {
 		padding: 17px 25px;
 		border-bottom: 1px solid #e8e8e8;
 		display: block;
-		color: #474747;
+		color: #0c129f;
 	}
 	.hero-text {
 		margin-bottom: 50px;
@@ -1626,6 +1647,7 @@ ol {
 	.intro-newslatter input[type=text],
 	.intro-newslatter input[type=email] {
 		margin-bottom: 20px;
+		border-radius: 25px;
 		width: 47.6%;
 	}
 	.intro-newslatter input[type=text].last-s,
@@ -1655,7 +1677,7 @@ ol {
 		padding: 30px;
 	}
 	.search-section.ss-other-page .section-title h2 {
-		background: #d82a4e;
+		background: #02bc28;
 	}
 	.course-item.featured-course .course-thumb {
 		position: relative;
@@ -1692,6 +1714,7 @@ ol {
 	.course-search-form .site-btn {
 		min-width: auto;
 		padding: 16px 20px;
+		border-radius: 25px;
 	}
 	.signup-warp {
 		padding: 0;

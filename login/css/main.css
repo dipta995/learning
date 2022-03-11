@@ -41,7 +41,7 @@ a {
 	font-family: Oswald-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: #000;
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -55,7 +55,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #111111;
+  color: #000;
 }
 
 /*---------------------------------------------*/
@@ -67,7 +67,7 @@ p {
 	font-family: Oswald-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: #000;
 	margin: 0px;
 }
 
@@ -205,7 +205,7 @@ iframe {
 .login100-form-title {
   font-family: Oswald-Medium;
   font-size: 30px;
-  color: #43383e;
+  color: #000;
   line-height: 1.2;
   text-align: center;
 
@@ -258,7 +258,7 @@ iframe {
 .input100 {
   font-family: Oswald-Medium;
   font-size: 16px;
-  color: #43383e;
+  color: #000;
   line-height: 1.2;
 
   position: relative;

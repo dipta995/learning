@@ -42,40 +42,8 @@ $redirect_link_var = $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 .widget .btn-block { border-top-left-radius:0px;border-top-right-radius:0px; }
 </style>
 	<!-- Page info -->
-	<div class="page-info-section set-bg" ><img src="img/page-bg/4.jpg">
-		<div class="container">
-			<div class="site-breadcrumb">
-				<a style="color: red;" href="#">Home/</a>
-				<span>courseinfo</span>
-			</div>
-		</div>
-	</div>
-	<!-- Page info end -->
-
-
-	<!-- search section -->
-		<section class="search-section ss-other-page">
-		<div class="container">
-			<div class="search-warp">
-				<div class="section-title text-white">
-					<h2><span>Search your course</span></h2>
-				</div>
-				<div class="row">
-					<div class="col-lg-1"></div>
-					<div class="col-lg-11 ">
-						<!-- search form -->
-						<form method="get" action="searchresult.php?search=" class="course-search-form">
-							<input type="text" style="width: 650px;" name="search" placeholder="Course">
-							<!-- <input type="text" class="last-m" placeholder="Category"> -->
-							<button class="site-btn btn-dark">Search Couse</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- search section end -->
-
+	
+<?php include 'include/background.php'; ?>
 
 	<!-- single course section -->
 	<?php 
@@ -159,7 +127,6 @@ $redirect_link_var = $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 					</div>
 				</div>
 			</div>
-			<img style="min-width: 100%;height: 500px;" src="<?php echo $value['course_image']; ?>" alt="" class="course-preview">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1 course-list">
 					<div class="cl-item">
@@ -168,8 +135,9 @@ $redirect_link_var = $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 					</div>
 					<style type="text/css">
 						.commentbox{
-							border: 2px solid #d82e2e;
-    background-color: #d82a4e;
+							border: 2px solid #02bc28;
+							border-radius: 25px;
+    background-color: #02bc28;
     color: white;
     margin: 5px;
 						}
@@ -187,7 +155,7 @@ $redirect_link_var = $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 								  height: 100px;
 								  padding: 12px 20px;
 								  box-sizing: border-box;
-								  border: 2px solid #ccc;
+								  border: 2px solid #02bc28;
 								  border-radius: 4px;
 								 
 								  resize: none;
@@ -208,7 +176,7 @@ $redirect_link_var = $protocol.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 								  height: 70px;
 								  padding: 12px 20px;
 								  box-sizing: border-box;
-								  border: 2px solid #ccc;
+								  border: 2px solid #02bc28;
 								  border-radius: 4px;
 								  
 								  resize: none;
