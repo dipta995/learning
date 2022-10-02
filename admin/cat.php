@@ -3,13 +3,13 @@ include 'head.php';
 if (isset($_GET['upcat'])) {
     if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['update'])) {
         
-    $senddata->updatecat($_POST,$_FILES,$_GET['upcat']);
+    $senddata->updatecat($_POST,$_GET['upcat']);
     }
 }elseif(isset($_GET['delcat'])){
     $deletedata->removecat($_GET['delcat']);
 }else{}
 if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['create'])) {
-    echo $senddata->createcat($_POST,$_FILES);
+    echo $senddata->createcat($_POST);
     }
 ?>
     
@@ -33,11 +33,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['create'])) {
                               <label for="exampleFormControlFile1">Example file input</label>
                               <input class="form-control form-control-lg" type="text" name="category_name" value="<?php echo $val['category_name']; ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlFile1">Example file input</label>
-                                <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
-                                <img style="height: 120px; width: 200px;" src="../<?php echo $val['category_image']; ?>">
-                              </div>
+                       
                             <input style="float: right;" class="btn btn-info" type="submit" name="update" value="Update Catagory">
                         
                         </form>
@@ -49,10 +45,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['create'])) {
                               <label for="exampleFormControlFile1">Example file input</label>
                               <input class="form-control form-control-lg" type="text" name="category_name" placeholder="Create New Catagory">
                             </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlFile1">Example file input</label>
-                                <input name="image" type="file" class="form-control-file" id="exampleFormControlFile1">
-                              </div>
+                           
                             <input style="float: right;" class="btn btn-info" type="submit" name="create" value="Create New Catagory">
                         
                         </form>
@@ -68,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['create'])) {
                               <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Category Name</th>
-                                <th scope="col">Category Image</th>
                                 <th scope="col">Button</th>
                               </tr>
                             </thead>
@@ -83,7 +75,6 @@ if ($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['create'])) {
                               <tr>
                                 <th scope="row"><?php echo $i; ?></th>
                                 <td><?php echo $value['category_name']; ?></td>
-                                <td><img style="height: 120px; width: 200px;" src="../<?php echo $value['category_image']; ?>"></td>
                                 <td>
                                     <a href="?upcat=<?php echo $value['category_id']; ?>">Update</a>
                                     <a href="?delcat=<?php echo $value['category_id']; ?>">Delete</a>

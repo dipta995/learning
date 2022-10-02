@@ -6,7 +6,7 @@
 {  
     margin: 0;  
     padding: 0;  
-    background-color:#6abadeba;  
+    background-color:#000;  
     font-family: 'Arial';  
 }  
 .login{  
@@ -15,7 +15,7 @@
         margin: auto;  
         margin: 20 0 0 450px;  
         padding: 80px;  
-        background: #23463f;  
+        background: #777583;  
         border-radius: 15px ;  
           
 }  

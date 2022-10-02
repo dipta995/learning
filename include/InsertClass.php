@@ -9,98 +9,37 @@ class InsertClass extends DatabaseConnection
 		
 		}
 
-		public function createcat($input,$files){
+		public function createcat($input){
 			$category_name = mysqli_real_escape_string($this->db,$input['category_name']);
-			$file_name = $files['image']['name'];
-      	$file_size =$files['image']['size'];
-      	$file_tmp =$files['image']['tmp_name'];
-      	$file_type=$files['image']['type'];
-      	$div            = explode('.', $file_name);
-	  	$file_ext       = strtolower(end($div));
-       
+			
+			if (empty($category_name)) {
+				return $message = "<div class='alert alert-danger' role='alert'>Field Must Not be empty</div>";
+			}else{
+				$query = "INSERT INTO category_table(category_name)VALUES('$category_name')"; 
+				$result = $this->queryfunk($query);
+	
+			 return $message = "<div class='alert alert-success' role='alert'>Successfully Inserted</div>";
+			}
     
-      	$uploaded_image = "img/".$file_name;
-	    $move_image = "../img/".$file_name;
-
-      
-      $extensions= array("jpeg","jpg","png");
-      
-      if(in_array($file_ext,$extensions)=== false){
-         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-      }
-      
-      if($file_size > 2097152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,$move_image);
-
-         $query = "INSERT INTO category_table(category_name,category_image)VALUES('$category_name','$uploaded_image')"; 
-			$result = $this->queryfunk($query);
-
-		 return $message = "<div class='alert alert-success' role='alert'>Successfully Inserted</div>";
-      }else{
-         print_r($errors);
-      }
-
-
-
 
 
 		}
-		public function updatecat($input,$files,$catid){
+		public function updatecat($input,$catid){
 			$category_name = mysqli_real_escape_string($this->db,$input['category_name']);
-		$file_name = $files['image']['name'];
-      	$file_size =$files['image']['size'];
-      	$file_tmp =$files['image']['tmp_name'];
-      	$file_type=$files['image']['type'];
-      	$div            = explode('.', $file_name);
-	  	$file_ext       = strtolower(end($div));
-       
-    
-      	$uploaded_image = "img/".$file_name;
-	    $move_image = "../img/".$file_name;
-
-      
-      $extensions= array("jpeg","jpg","png");
       if (empty($category_name)) {
-      	
-      }elseif(empty($file_name)){
+		return $message = "<div class='alert alert-danger' role='alert'>Field Must Not Be empty</div>";
+      }else{
     
       	    $query = "UPDATE category_table SET category_name='$category_name' WHERE category_id = $catid";
 			$result = $this->queryfunk($query);
 
 		 return $message = "<div class='alert alert-success' role='alert'>Successfully Inserted</div>";
-      }else{
-
-
-      
-      if(in_array($file_ext,$extensions)=== false){
-         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
       }
-      
-      if($file_size > 2097152){
-         $errors[]='File size must be excately 2 MB';
-      }
-      
-      if(empty($errors)==true){
-         move_uploaded_file($file_tmp,$move_image);
-         $query = "SELECT * FROM category_table WHERE category_id = '$catid'";
-		    $getdata = self::queryfunk($query);
-		     	while ($selectedimg = $getdata->fetch_assoc()) { 
-		            $delimg = '../'.$selectedimg['category_image'];
-		            unlink($delimg);
-		        }
 
-           $query = "UPDATE category_table SET category_name='$category_name',category_image='$uploaded_image' WHERE category_id =$catid ";
-			$result = $this->queryfunk($query);
 
-		 return $message = "<div class='alert alert-success' role='alert'>Successfully Inserted</div>";
-      }else{
-         print_r($errors);
-      }
-       }
+     
+      
+      
 	}
 
 
