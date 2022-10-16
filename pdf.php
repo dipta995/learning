@@ -75,7 +75,7 @@ $pdf->Cell(420,10,$date,"A",0,'C',0);
 
 $pdf->SetFont('Arial','B',16); 
 $pdf->SetXY(480,470); 
-$signataire = "Shohan & Nayon"; 
+$signataire = "Teacher"; 
 $pdf->Cell(150,19,$signataire,"B",0,'C'); 
 
 $pdf->Output();
